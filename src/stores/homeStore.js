@@ -12,8 +12,15 @@ const homeStore = create ((set) => ({
 
     searchCoins: async() => {
         const {query} = homeStore.getState()
-        const res = await axios.get('https://api.coingecko.com/api/v3/search?query=${query}')
-        console.log(query)
+        const res = await axios.get(`https://api.coingecko.com/api/v3/search?query=${query}`)
+        const coins = res.data.coins.map(coin => {
+            return {
+                name: coin.name,
+                image: coin.large,
+                id: coin.id
+            }
+        })
+    set ({coins})
     },
 
     
