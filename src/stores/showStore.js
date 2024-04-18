@@ -2,11 +2,10 @@ import create from 'zustand'
 import axios from 'axios'
 
 const showStore = create((set) => ({
-    res: {}, // Initialisez res avec un objet vide
+    res: {}, 
     query: '',
 
     setQuery: (e) => {
-        // Appeler searchChartData lorsque setQuery est exécuté
         showStore.getState().searchChartData();
     },
 

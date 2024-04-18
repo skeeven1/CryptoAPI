@@ -11,7 +11,7 @@ export default function Show() {
       show.fetchChartData(id);
   }, [id]);
 
-  // Vérifiez si show.res existe avant d'y accéder
+ 
 
   return (
       <div>
