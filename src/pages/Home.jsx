@@ -11,6 +11,7 @@ export default function Home() {
     store.fetchCoins();
   }, []); 
 
+  // This page is for selecting / searching a crypto
   return (
     <div>
       <div className="header">CryptoKing</div>
@@ -18,6 +19,7 @@ export default function Home() {
         <input
           type="text"
           className="search-input"
+          placeholder="Search your favourite currency..."
           value={store.query}
           onChange={store.setQuery} 
         />
