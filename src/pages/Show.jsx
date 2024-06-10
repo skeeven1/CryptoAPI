@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom'; 
 import axios from 'axios';
 import showStore from '../stores/showStore';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
@@ -89,6 +89,9 @@ export default function Show() {
           )}
         </AreaChart>
       </ResponsiveContainer>
+      <Link to="/" style={{ marginTop: '20px', textDecoration: 'none' }}>
+        <button>Retour à l'accueil</button> 
+      </Link>
     </div>
   );
 }
